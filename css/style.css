@@ -1,0 +1,108 @@
+/*
+	 CSS-Tricks Example - MagicLine Demo
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+* { margin: 0; padding: 0; }
+body { font: 14px Georgia, serif; background: #2F2626; color: #eee; }
+
+header { padding: 100px 0 0 0; display: block; }
+header h1 { width: 960px; margin: 0 auto; }
+a { color: #eee; }
+a:hover { color: white; }
+
+.nav-wrap { 
+	margin: 50px auto; 
+	background-color: rgba(0,0,0,0.6); 
+	border-top:    2px solid white; 
+	border-bottom: 2px solid white; 
+}
+
+/* Clearfix */
+.group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+
+
+/* Example One */
+#example-one { 
+	margin: 0 auto; 
+	list-style: none; 
+	position: relative; 
+	width: 960px; 
+}
+#example-one li { 
+	display: inline-block;	
+}
+#example-one a { 
+	color: #bbb; 
+	font-size: 14px; 
+	float: left;
+	padding: 6px 10px 4px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#example-one a:hover { 
+	color: white; 
+}
+#magic-line { 
+	position: absolute;
+	bottom: -2px; 
+	left: 0; 
+	width: 100px; 
+	height: 2px; 
+	background: #fe4902;
+}
+.current_page_item a { 
+	color: white !important; 
+}
+.ie6 #example-one li, .ie7 #example-one li { 
+	display: inline; 
+}
+.ie6 #magic-line {
+	bottom: -3px;
+}
+
+
+/* Example Two */
+#example-two { 
+	margin: 0 auto; 
+	list-style: none; 
+	position: relative; 
+	width: 960px; 
+}
+#example-two li { 
+	display: inline-block; 
+}
+#example-two li a { 
+	position: relative; 
+	z-index: 200; 
+	color: #bbb; 
+	font-size: 14px; 
+	display: block; 
+	float: left; 
+	padding: 6px 10px 4px 10px;
+	text-decoration: none;
+	text-transform: uppercase; 
+}
+#example-two li a:hover { 
+	color: white; 
+}
+#example-two #magic-line-two { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100px; 
+	background: #900; 
+	z-index: 100; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.current_page_item_two a { 
+	color: white !important; 
+}
+.ie6 #example-two li, .ie7 #example-two li {
+	display: inline;
+}
