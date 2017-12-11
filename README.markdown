@@ -1,1 +1,0 @@
-Demo is at: http://css-tricks.com/examples/MagicLine/
